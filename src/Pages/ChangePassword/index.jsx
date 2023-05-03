@@ -26,15 +26,6 @@ const ChangePassword = () => {
       .post(`http://localhost:8080/auth/changepassword`, values)
       .then((response) => {
         console.log("Data", response);
-        // if (response.data.message === "Password updated successfully") {
-        //   message.success(
-        //     "Password updated successfully, Please login with your new password",
-        //     5
-        //   );
-        //   setTimeout(() => {
-        //     navigate("/");
-        //   }, 3000);
-        // }
         if (response.data.msg === "password changed") {
           message.success(
             "Password updated successfully, Please login with your new password",
